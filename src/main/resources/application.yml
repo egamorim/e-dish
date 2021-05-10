@@ -1,0 +1,32 @@
+server:
+  port: 8000
+  servlet:
+    context-path: /edish
+
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      username: user
+      password: password
+      databse: edish
+      port: 27017
+      host: localhost
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: new-order
+          content-type: application/*+avro
+        output:
+          destination: new-order
+          content-type: application/*+avro
+
+      kafka:
+        binder:
+          producer-properties:
+            schema:
+              registry:
+                url: http://localhost:8081
+  main:
+    allow-bean-definition-overriding: true

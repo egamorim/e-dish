@@ -1,0 +1,34 @@
+{
+    "type": "record",
+    "name": "OrderRequested",
+    "namespace": "com.egamorim.edish.infrastructure.messaging.schemas",
+    "fields": [
+    {
+        "name": "id",
+        "type": "string"
+    },
+    {
+        "name": "merchant_id",
+        "type": "string"
+    },
+    {
+        "name": "items",
+        "type": {
+            "type": "array",
+            "items": {
+                "type": "record",
+                "name": "OrderItem",
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "string"
+                    },
+                    {
+                        "name": "amount",
+                        "type": "int"
+                    }
+                ]
+            }
+        }
+    }]
+}

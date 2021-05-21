@@ -1,6 +1,6 @@
 # e-dish
 <p>
-    e-dish is a fictitious website that I've created as an example of how to configure 
+    e-dish is a fictitious service that I've created as an example of how to configure 
 Spring cloud stream with Apache Kafka and Schema Registry within a Spring boot application.
 </p>
 
